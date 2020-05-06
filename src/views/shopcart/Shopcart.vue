@@ -1,46 +1,45 @@
 <template>
   <div id="shopcart">
-    购物车
-    <!-- <nav-bar class="nav-bar">
+    <nav-bar class="nav-bar">
       <div slot="center">购物车({{cartCount}})</div>
     </nav-bar>
 
     <cart-list/>
 
-    <cart-bottom-bar/> -->
+    <cart-bottom-bar/>
 
   </div>
 </template>
 
 <script>
-// import NavBar from 'components/common/navbar/NavBar';
-// import CartList from './childComps/CartList';
-// import CartBottomBar from './childComps/CartBottomBar';
+import NavBar from 'components/common/navbar/NavBar';
+import CartList from './childComps/CartList';
+import CartBottomBar from './childComps/CartBottomBar';
 
-// import { mapGetters } from 'vuex';
+import { mapGetters } from 'vuex';
 
 
 export default {
   name: 'Shopcart',
-  // data() { 
-  //   return {
+  data() { 
+    return {
 
-  //   }
-  // },
-  // components:{
-  //   NavBar,
-  //   CartList,
-  //   CartBottomBar
-  // },
-  // computed:{
-  //   //mapGetters的第一种用法
-  //   ...mapGetters(['cartCount']),
-  //   //第二种用法
-  //   // ...mapGetters({
-  //   //   length: 'cartLength',
-  //   //   list: 'cartList'
-  //   // })
-  // }
+    }
+  },
+  components:{
+    NavBar,
+    CartList,
+    CartBottomBar
+  },
+  computed:{
+    //mapGetters的第一种用法
+    ...mapGetters(['cartCount']),
+    //第二种用法
+    // ...mapGetters({
+    //   length: 'cartLength',
+    //   list: 'cartList'
+    // })
+  }
  }
 </script>
 

@@ -1,10 +1,10 @@
 <template>
   <div id="detail">
-    <!-- <detail-nav-bar class="detail-nav" 
+    <detail-nav-bar class="detail-nav" 
                     @titleClick="titleClick"
-                    ref="nav"></detail-nav-bar> -->
+                    ref="nav"></detail-nav-bar>
     <!-- <div>{{this.$store.state.count}}</div> -->
-    <!-- <scroll class="content" ref="scroll"
+    <scroll class="content" ref="scroll"
             :probe-type="3"
             @scroll="contentScroll">
       <detail-swiper :topImages="topImages" ></detail-swiper> 
@@ -16,7 +16,7 @@
       <goods-list ref="recommend" :goods="recommends"></goods-list>
     </scroll>
     <detail-bottom-bar @addToCart="addToCart"></detail-bottom-bar>
-    <back-top @click.native="backTop" v-show="isShowBackTop"></back-top> -->
+    <back-top @click.native="backTop" v-show="isShowBackTop"></back-top>
   </div>
 </template>
 
@@ -130,11 +130,11 @@ export default {
       //console.log(product);
       //(1)
       //mutation的提交
-      //this.$store.commit('addCart', product);
+      // this.$store.commit('addCart', product);
       //action的提交
-      //this.$store.dispatch('addCart', product).then({
-      //   console.log(res);
-      // })
+      this.$store.dispatch('addCart', product).then(res => {
+        console.log(res);
+      });
 
       //(2)
       this.addCart(product).then(res => {

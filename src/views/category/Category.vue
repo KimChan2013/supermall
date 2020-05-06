@@ -1,8 +1,7 @@
 <template>
   <div class="category">
-    分类
-    <!-- <nav-bar class="nav-bar"><div slot="center">分类</div></nav-bar>
-    <div class="content">
+    <nav-bar class="nav-bar"><div slot="center">分类</div></nav-bar>
+    <!-- <div class="content">
       <tab-menu :categories="categories" @selectItem="selectItem"></tab-menu>
       <scroll class="tab-content">
         <div>
@@ -17,8 +16,8 @@
 </template>
 
 <script>
-// import NavBar from 'components/common/navbar/NavBar';
-// import Scroll from 'components/common/scroll/Scroll';
+import NavBar from 'components/common/navbar/NavBar';
+import Scroll from 'components/common/scroll/Scroll';
 // import TabControl from 'components/content/tabControl/TabControl'
 
 // import TabMenu from './childComps/TabMenu';
@@ -66,14 +65,14 @@ export default {
   //   //this.dialog();
     
   // },
-  // components:{
-  //   NavBar,
+  components:{
+    NavBar,
   //   Scroll,
   //   TabMenu,
   //   TabContent,
   //   TabControl,
   //   TabContentDetail,
-  // },
+  },
   // methods:{
     
   //   _getCategory(){
